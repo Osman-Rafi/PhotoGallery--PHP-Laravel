@@ -8,7 +8,7 @@ class Album extends Model
 {
     protected $fillable=array('name','description','cover_image');
 
-    public function photos()
+    public function Photos()
     {
         return $this->hasmany('App\Photo');
     }

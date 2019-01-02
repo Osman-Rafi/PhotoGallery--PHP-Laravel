@@ -51,6 +51,12 @@ class PhotoController extends Controller
 
         $photo->save();
 
-        return redirect('/albums/'.$request->album_id)->with('success','Photo Created');
+        return redirect('/albums/'.$request->album_id)->with('success','Photo Uploaded');
+    }
+
+    public function show($id)
+    {
+        $album = Album::with('Photos')->find($id);
+        return view('albums.show')->with('album',$album);
     }
 }
