@@ -17,7 +17,7 @@
         @foreach($album->photos as $photo)
             <div class="row">
                 <div class="col-lg-3 col-md-4 col-xs-6 thumb">
-                    <a href="/albums/{{$album->id}}">
+                    <a href="/photos/{{$photo->id}}">
                         <img src="/storage/photos/{{$photo->album_id}}/{{$photo->photo}}" alt="{{$photo->name}}"
                              class="img-thumbnail">
                     </a>
